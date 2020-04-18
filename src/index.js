@@ -7,19 +7,19 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 
 const feelingReducer = (state = "", action) => {
-  return;
+  return null;
 };
 
 const comprehensionReducer = (state = "", action) => {
-  return;
+  return null;
 };
 
 const supportReducer = (state = "", action) => {
-  return;
+  return null;
 };
 
 const commentsReducer = (state = "", action) => {
-  return;
+  return null;
 };
 
 const storeInstance = createStore(
