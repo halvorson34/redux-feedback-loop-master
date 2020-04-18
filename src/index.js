@@ -6,15 +6,19 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import logger from "redux-logger";
 
-const feelingReducer = (state = "", action) => {
+const feelingReducer = (state = {}, action) => {
+  if (action.type === "SET_FEELING_RATING") {
+    return action.payload;
+  }
+
+  return state;
+};
+
+const comprehensionReducer = (state = {}, action) => {
   return null;
 };
 
-const comprehensionReducer = (state = "", action) => {
-  return null;
-};
-
-const supportReducer = (state = "", action) => {
+const supportReducer = (state = {}, action) => {
   return null;
 };
 

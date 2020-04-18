@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./App.css";
 import { HashRouter as Router, Route } from "react-router-dom";
 import CommentsPage from "../Pages/CommentsPage/CommentsPage";
 import ComprehensionPage from "../Pages/ComprehensionPage/ComprehensionPage";
