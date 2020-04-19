@@ -40,6 +40,7 @@ class SupportPage extends Component {
               placeholder="1 to 5"
               type="text"
               id="supportInput"
+              required
             />
           </div>
           <div id="buttonField">
@@ -51,6 +52,6 @@ class SupportPage extends Component {
   }
 }
 
-const mapToStoreProps = (store) => ({ store });
+const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapToStoreProps)(SupportPage);
+export default connect(mapStoreToProps)(SupportPage);

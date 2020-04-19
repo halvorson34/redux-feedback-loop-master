@@ -29,7 +29,10 @@ const supportReducer = (state = {}, action) => {
 };
 
 const commentsReducer = (state = "", action) => {
-  return null;
+  if (action.type === "SET_COMMENTS_INPUT") {
+    return action.payload;
+  }
+  return state;
 };
 
 const storeInstance = createStore(

@@ -37,6 +37,7 @@ class FeelingPage extends Component {
               placeholder="1 to 5"
               type="text"
               id="feelingInput"
+              required
             />
           </div>
           <div id="buttonField">

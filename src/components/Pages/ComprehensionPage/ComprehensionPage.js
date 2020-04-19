@@ -39,6 +39,7 @@ class ComprehensionPage extends Component {
               placeholder="1 to 5"
               type="text"
               id="comprehensionInput"
+              required
             />
           </div>
           <div id="buttonField">
