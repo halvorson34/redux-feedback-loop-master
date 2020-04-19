@@ -40,7 +40,6 @@ class CommentsPage extends Component {
               placeholder="whats crack-a-lackin!?"
               type="text"
               id="commentsInput"
-              required
             />
           </div>
           <div id="buttonField">
