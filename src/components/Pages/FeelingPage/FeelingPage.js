@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import "./FeelingPage.css";
 
 class FeelingPage extends Component {
   state = {
@@ -27,14 +28,21 @@ class FeelingPage extends Component {
     return (
       <div>
         <h1>How are you feeling today?</h1>
-        <label for="feelingInput">Feeling?</label>
-        <input
-          onChange={this.onInputChange("feelingRating")}
-          placeholder="1 to 5"
-          type="text"
-          id="feelingInput"
-        />
-        <button onClick={this.onNextClick}>NEXT</button>
+        <form>
+          <div id="inputField">
+            <label for="feelingInput">Feeling?</label>
+            <br />
+            <input
+              onChange={this.onInputChange("feelingRating")}
+              placeholder="1 to 5"
+              type="text"
+              id="feelingInput"
+            />
+          </div>
+          <div id="buttonField">
+            <button onClick={this.onNextClick}>NEXT</button>
+          </div>
+        </form>
       </div>
     );
   }

@@ -1,0 +1,34 @@
+input {
+  border: none;
+  border-bottom: 2px solid blue;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+}
+
+button {
+  background-color: lightgrey;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+label {
+  font-size: 15px;
+}
+
+form {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#inputField {
+  float: left;
+  text-align: left;
+}
+
+#buttonField {
+  float: right;
+}
