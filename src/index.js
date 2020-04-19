@@ -15,11 +15,17 @@ const feelingReducer = (state = {}, action) => {
 };
 
 const comprehensionReducer = (state = {}, action) => {
-  return null;
+  if (action.type === "SET_COMPREHENSION_RATING") {
+    return action.payload;
+  }
+  return state;
 };
 
 const supportReducer = (state = {}, action) => {
-  return null;
+  if (action.type === "SET_SUPPORT_RATING") {
+    return action.payload;
+  }
+  return state;
 };
 
 const commentsReducer = (state = "", action) => {
