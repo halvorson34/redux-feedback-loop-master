@@ -52,6 +52,6 @@ class CommentsPage extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+//const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(CommentsPage);
+export default connect()(CommentsPage);

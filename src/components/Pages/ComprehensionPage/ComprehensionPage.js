@@ -27,6 +27,7 @@ class ComprehensionPage extends Component {
 
   render() {
     console.log(this.props.store);
+
     return (
       <div>
         <h1>How well are you understanding the content?</h1>
@@ -51,6 +52,6 @@ class ComprehensionPage extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+//const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(ComprehensionPage);
+export default connect()(ComprehensionPage);

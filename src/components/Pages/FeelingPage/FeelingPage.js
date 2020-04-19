@@ -49,6 +49,6 @@ class FeelingPage extends Component {
   }
 }
 
-const mapStoreToProps = (store) => ({ store });
+//const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(FeelingPage);
+export default connect()(FeelingPage);
