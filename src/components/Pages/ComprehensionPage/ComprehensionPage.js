@@ -25,6 +25,10 @@ class ComprehensionPage extends Component {
     this.props.history.push("/support");
   };
 
+  onBackClick = (event) => {
+    this.props.history.push("/");
+  };
+
   render() {
     console.log(this.props.store);
 
@@ -32,20 +36,25 @@ class ComprehensionPage extends Component {
       <div>
         <h1>How well are you understanding the content?</h1>
         <form>
-          <div id="inputField">
-            <label for="comprehensionInput">Understanding?</label>
+          <section id="inputField">
+            <label for="feedbackInput">Understanding?</label>
             <br />
             <input
               onChange={this.onInputChange("comprehensionRating")}
               placeholder="1 to 5"
               type="text"
-              id="comprehensionInput"
+              id="feedbackInput"
               required
             />
-          </div>
-          <div id="buttonField">
-            <button onClick={this.onNextClick}>NEXT</button>
-          </div>
+          </section>
+          <section id="buttonField">
+            <button onClick={this.onBackClick} id="backButton">
+              BACK
+            </button>
+            <button onClick={this.onNextClick} id="nextButton">
+              NEXT
+            </button>
+          </section>
         </form>
       </div>
     );

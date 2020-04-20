@@ -25,6 +25,10 @@ class CommentsPage extends Component {
     this.props.history.push("/review");
   };
 
+  onBackClick = (event) => {
+    this.props.history.push("/support");
+  };
+
   render() {
     console.log(this.props.store);
 
@@ -32,19 +36,24 @@ class CommentsPage extends Component {
       <div>
         <h1>Any comments you want to leave?</h1>
         <form>
-          <div id="inputField">
-            <label for="commentsInput">Comments?</label>
+          <section id="inputField">
+            <label for="feedbackInput">Comments?</label>
             <br />
             <input
               onChange={this.onInputChange("commentsInput")}
               placeholder="whats crack-a-lackin!?"
               type="text"
-              id="commentsInput"
+              id="feedbackInput"
             />
-          </div>
-          <div id="buttonField">
-            <button onClick={this.onNextClick}>NEXT</button>
-          </div>
+          </section>
+          <section id="buttonField">
+            <button onClick={this.onBackClick} id="backButton">
+              BACK
+            </button>
+            <button onClick={this.onNextClick} id="nextButton">
+              NEXT
+            </button>
+          </section>
         </form>
       </div>
     );

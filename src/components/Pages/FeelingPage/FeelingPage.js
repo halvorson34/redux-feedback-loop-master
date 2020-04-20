@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import "./FeelingPage.css";
+import "../Pages.css";
 
 class FeelingPage extends Component {
   state = {
@@ -8,14 +8,9 @@ class FeelingPage extends Component {
   };
 
   onInputChange = (input) => (event) => {
-    this.setState(
-      {
-        [input]: event.target.value,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      [input]: event.target.value,
+    });
   };
 
   onNextClick = (event) => {

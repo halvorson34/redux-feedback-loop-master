@@ -18,17 +18,26 @@ label {
 }
 
 form {
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+  display: inline-block;
 }
 
 #inputField {
-  float: left;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: left;
 }
 
-#buttonField {
-  float: right;
+#nextButton {
+  position: absolute;
+  right: 600px;
+}
+
+#backButton {
+  position: absolute;
+  left: 600px;
+}
+
+#submitButton {
+  position: absolute;
+  right: 600px;
 }

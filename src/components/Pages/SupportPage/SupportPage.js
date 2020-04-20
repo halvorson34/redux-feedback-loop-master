@@ -25,6 +25,10 @@ class SupportPage extends Component {
     this.props.history.push("/comments");
   };
 
+  onBackClick = (event) => {
+    this.props.history.push("/comprehension");
+  };
+
   render() {
     console.log(this.props.store);
 
@@ -32,20 +36,25 @@ class SupportPage extends Component {
       <div>
         <h1>How well are you being supported?</h1>
         <form>
-          <div id="inputField">
-            <label for="supportInput">Support?</label>
+          <section id="inputField">
+            <label for="feedbackInput">Support?</label>
             <br />
             <input
               onChange={this.onInputChange("supportRating")}
               placeholder="1 to 5"
               type="text"
-              id="supportInput"
+              id="feedbackInput"
               required
             />
-          </div>
-          <div id="buttonField">
-            <button onClick={this.onNextClick}>NEXT</button>
-          </div>
+          </section>
+          <section id="buttonField">
+            <button onClick={this.onBackClick} id="backButton">
+              BACK
+            </button>
+            <button onClick={this.onNextClick} id="nextButton">
+              NEXT
+            </button>
+          </section>
         </form>
       </div>
     );

@@ -22,11 +22,15 @@ class ReviewPage extends Component {
       });
   };
 
+  onBackClick = (event) => {
+    this.props.history.push("/comments");
+  };
+
   render() {
     return (
       <div>
         <h1>Review Your Feedback</h1>
-        <div>
+        <form>
           <h4>Feelings: {this.props.store.feelingReducer.feelingRating}</h4>
           <h4>
             Understanding:{" "}
@@ -34,8 +38,15 @@ class ReviewPage extends Component {
           </h4>
           <h4>Support: {this.props.store.supportReducer.supportRating}</h4>
           <h4>Comments: {this.props.store.commentsReducer.commentsInput}</h4>
-          <button onClick={this.submitFeedback}>SUBMIT</button>
-        </div>
+          <section>
+            <button onClick={this.onBackClick} id="backButton">
+              BACK
+            </button>
+            <button onClick={this.submitFeedback} id="submitButton">
+              SUBMIT
+            </button>
+          </section>
+        </form>
       </div>
     );
   }
