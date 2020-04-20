@@ -7,14 +7,9 @@ class SupportPage extends Component {
   };
 
   onInputChange = (input) => (event) => {
-    this.setState(
-      {
-        [input]: event.target.value,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      [input]: event.target.value,
+    });
   };
 
   onNextClick = (event) => {
